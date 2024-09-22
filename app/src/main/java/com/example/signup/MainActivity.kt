@@ -27,11 +27,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        binding.progressBar.max = 3
 
-
-        ObjectAnimator.ofInt(binding.progressBar,"progress",1)
-            .start()
 
 }
 
