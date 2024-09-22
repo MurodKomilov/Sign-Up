@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:paddingHorizontal="47dp"
+    android:paddingTop="70dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SignUp2">
@@ -12,7 +13,6 @@
         android:id="@+id/signUp_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="91dp"
         android:fontFamily="@font/inter_semibold"
         android:text="Sign Up"
         android:textSize="15sp"
@@ -69,6 +69,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/password_etx" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2 of 3"
+        android:fontFamily="@font/inter_semibold"
+        android:textSize="13sp"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/signUp_btn"
@@ -80,5 +89,17 @@
         android:background="@drawable/button_background"
         app:layout_constraintTop_toBottomOf="@+id/progressBar"
         tools:layout_editor_absoluteX="35dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:textSize="11sp"
+        android:fontFamily="@font/inter_semibold"
+        android:layout_marginTop="90dp"
+        android:gravity="center"
+        android:text="By signing up, you agree to our Terms of Service and Privacy Policy"
+        app:layout_constraintEnd_toEndOf="@+id/signUp_btn"
+        app:layout_constraintStart_toStartOf="@+id/signUp_btn"
+        app:layout_constraintTop_toBottomOf="@+id/signUp_btn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

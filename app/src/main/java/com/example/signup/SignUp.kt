@@ -14,21 +14,27 @@ class SignUp : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySignUpBinding.inflate(layoutInflater)
-        enableEdgeToEdge()
         setContentView(binding.root)
 
 
-        binding.progressBar.max = 3
 
 
-        ObjectAnimator.ofInt(binding.progressBar,"progress",1)
-            .start()
+        binding.apply {
+            progressBar.max = 3
 
-        binding.nextBtn.setOnClickListener {
-            var intent = Intent(this,SignUp2::class.java)
-            startActivity(intent)
+
+            ObjectAnimator.ofInt(progressBar, "progress", 1)
+                .start()
+
+            nextBtn.setOnClickListener {
+                var intent = Intent(this@SignUp, SignUp2::class.java)
+                startActivity(intent)
+            }
+
+            icBack.setOnClickListener {
+                finish()
+            }
         }
-
 
 
     }

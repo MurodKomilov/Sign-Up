@@ -14,13 +14,14 @@ class CreateAccount : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = CreateAccountBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(binding.root)
 
         binding.button.setOnClickListener {
             val intent = Intent(this,SignUp::class.java)
             startActivity(intent)
         }
+
+
 
 
 
