@@ -6,7 +6,7 @@
     android:paddingHorizontal="47dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUp">
+    tools:context=".SignUp2">
 
     <TextView
         android:id="@+id/signUp_txt"
@@ -38,18 +38,26 @@
         android:textSize="28sp"
         android:fontFamily="@font/inter_semibold"
         android:textColor="@color/black"
-        android:text="What's your email?"
+        android:text="Create a Password"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/signUp_txt"/>
 
     <EditText
-        android:id="@+id/email_etx"
+        android:id="@+id/password_etx"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
-        android:hint="Email address"
+        android:hint="Password"
         app:layout_constraintStart_toStartOf="@id/ic_back"
         app:layout_constraintTop_toBottomOf="@id/txt1"/>
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show password"
+        app:layout_constraintStart_toStartOf="@id/password_etx"
+        app:layout_constraintTop_toBottomOf="@id/password_etx" />
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -60,14 +68,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/email_etx" />
+        app:layout_constraintTop_toBottomOf="@id/password_etx" />
 
     <Button
-        android:id="@+id/next_btn"
+        android:id="@+id/signUp_btn"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_marginTop="30dp"
-        android:text="NEXT"
+        android:text="Sign Up"
         android:textColor="@color/white"
         android:background="@drawable/button_background"
         app:layout_constraintTop_toBottomOf="@+id/progressBar"

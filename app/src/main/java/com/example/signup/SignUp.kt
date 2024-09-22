@@ -1,6 +1,7 @@
 package com.example.signup
 
 import android.animation.ObjectAnimator
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -13,6 +14,7 @@ class SignUp : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySignUpBinding.inflate(layoutInflater)
+        enableEdgeToEdge()
         setContentView(binding.root)
 
 
@@ -21,6 +23,12 @@ class SignUp : AppCompatActivity() {
 
         ObjectAnimator.ofInt(binding.progressBar,"progress",1)
             .start()
+
+        binding.nextBtn.setOnClickListener {
+            var intent = Intent(this,SignUp2::class.java)
+            startActivity(intent)
+        }
+
 
 
     }
