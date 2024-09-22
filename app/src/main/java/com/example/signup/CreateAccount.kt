@@ -9,7 +9,8 @@ import androidx.activity.enableEdgeToEdge
 import com.example.signup.databinding.CreateAccountBinding
 
 class CreateAccount : ComponentActivity() {
-    private lateinit var binding:CreateAccountBinding
+    private lateinit var binding: CreateAccountBinding
+
     @SuppressLint("ResourceAsColor")
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = CreateAccountBinding.inflate(layoutInflater)
@@ -17,15 +18,12 @@ class CreateAccount : ComponentActivity() {
         setContentView(binding.root)
 
         binding.button.setOnClickListener {
-            val intent = Intent(this,SignUp::class.java)
+            val intent = Intent(this, SignUp::class.java)
             startActivity(intent)
         }
 
 
-
-
-
-}
+    }
 
 
 }

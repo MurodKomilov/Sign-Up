@@ -22,7 +22,7 @@ class SignUp3 : AppCompatActivity() {
         setupOtpInput()
 
         binding.progressBar.max = 3
-        ObjectAnimator.ofInt(binding.progressBar,"progress", 3)
+        ObjectAnimator.ofInt(binding.progressBar, "progress", 3)
             .start()
 
     }
